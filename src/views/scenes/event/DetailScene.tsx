@@ -1,6 +1,6 @@
-import React from 'react';
-import EventDetailContainer from '../../containers/event/EventDetailContainer';
-import NotificationContainer from '../../containers/notification/NotificationContainer';
+import React from 'react'
+import EventDetailContainer from '../../containers/event/EventDetailContainer'
+import NotificationContainer from '../../containers/notification/NotificationContainer'
 
 const EventDetailScene: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const EventDetailScene: React.FC = () => {
       <EventDetailContainer />
       <NotificationContainer />
     </>
-  );
-};
+  )
+}
 
-export default EventDetailScene;
+export default EventDetailScene

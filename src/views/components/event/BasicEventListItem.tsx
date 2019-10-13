@@ -1,47 +1,47 @@
-import React from 'react';
-import { Event } from 'typescript-fetch-api';
-import GroupChip from './GroupChip';
-import CategoryChips from './CategoryChips';
-import OrganizerChips from './OrganizerChips';
-import HoldDateBox from './HoldDateBox';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import { makeStyles } from '@material-ui/core/styles';
+import React from 'react'
+import { Event } from 'typescript-fetch-api'
+import GroupChip from './GroupChip'
+import CategoryChips from './CategoryChips'
+import OrganizerChips from './OrganizerChips'
+import HoldDateBox from './HoldDateBox'
+import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
+import Divider from '@material-ui/core/Divider'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles({
   eventContainer: {
-    height: '200px',
+    height: '200px'
   },
   groupChipContainer: {
-    margin: '10px',
+    margin: '10px'
   },
   userChipContainer: {
-    margin: '10px',
+    margin: '10px'
   },
   category: {
-    margin: '5px',
+    margin: '5px'
   },
   listItem: {
     '&:hover': {
-      backgroundColor: '#e1f5fe',
-    },
+      backgroundColor: '#e1f5fe'
+    }
   },
   image: {
     width: '100%',
-    marginTop: '10px',
-  },
-});
+    marginTop: '10px'
+  }
+})
 
 interface Props {
-  event: Event;
+  event: Event
 }
 
 /**
  * Eventの基本となるリスト
  */
 const BasicEventListItem: React.FC<Props> = (props: Props) => {
-  const classes = useStyles({});
+  const classes = useStyles({})
   return (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={3}>
@@ -72,7 +72,7 @@ const BasicEventListItem: React.FC<Props> = (props: Props) => {
         </Grid>
       </Grid>
     </Grid>
-  );
-};
+  )
+}
 
-export default BasicEventListItem;
+export default BasicEventListItem

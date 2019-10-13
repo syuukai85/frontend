@@ -1,2 +1,2 @@
-import eventsReducer from './reducers';
-export default eventsReducer;
+import eventsReducer from './reducers'
+export default eventsReducer

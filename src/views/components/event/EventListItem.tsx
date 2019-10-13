@@ -1,24 +1,24 @@
-import React from 'react';
-import ListItem from '@material-ui/core/ListItem';
-import { Event } from 'typescript-fetch-api';
-import BasicEventListItem from './BasicEventListItem';
-import EnrollmentEventListItem from './EnrollmentEventListItem';
-import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import ListItem from '@material-ui/core/ListItem'
+import { Event } from 'typescript-fetch-api'
+import BasicEventListItem from './BasicEventListItem'
+import EnrollmentEventListItem from './EnrollmentEventListItem'
+import { makeStyles } from '@material-ui/core/styles'
+import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles({
   listItem: {
     '&:hover': {
-      backgroundColor: '#e1f5fe',
-    },
+      backgroundColor: '#e1f5fe'
+    }
   },
-  listLink: { textDecoration: 'none', color: '#212121' },
-});
+  listLink: { textDecoration: 'none', color: '#212121' }
+})
 
 interface Props {
   // 表示の切り替えに利用
-  type: 'basic' | 'enrollment';
-  event: Event;
+  type: 'basic' | 'enrollment'
+  event: Event
 }
 
 /**
@@ -27,7 +27,7 @@ interface Props {
  * 今回お布施として投げ銭から受け取る実装も追加しているため、切り替えをtypeを利用して分岐
  */
 const EventListItem: React.FC<Props> = (props: Props) => {
-  const classes = useStyles({});
+  const classes = useStyles({})
   return (
     <Link to={`/events/${props.event.id}`} className={classes.listLink}>
       <ListItem className={classes.listItem}>
@@ -35,7 +35,7 @@ const EventListItem: React.FC<Props> = (props: Props) => {
         {props.type === 'enrollment' && <EnrollmentEventListItem event={props.event} />}
       </ListItem>
     </Link>
-  );
-};
+  )
+}
 
-export default EventListItem;
+export default EventListItem

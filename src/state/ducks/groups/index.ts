@@ -1,2 +1,2 @@
-import groupsReducer from './reducers';
-export default groupsReducer;
+import groupsReducer from './reducers'
+export default groupsReducer

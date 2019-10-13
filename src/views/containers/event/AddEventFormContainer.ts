@@ -1,23 +1,23 @@
-import { connect } from 'react-redux';
-import { Event } from 'typescript-fetch-api';
-import AddEventForm from '../../components/event/add/AddEventForm';
-import eventOparations from '../../../state/ducks/events/operations';
-import notificationOparations from '../../../state/ducks/notification/operation';
-import { VariantIconKeys } from '../../../state/ducks/notification/types';
-import { default as addEventForm, FormValues } from '../../forms/addEvent';
-import Redux from 'redux';
-import * as H from 'history';
-import { withFormik } from 'formik';
-import { withRouter } from 'react-router';
+import { connect } from 'react-redux'
+import { Event } from 'typescript-fetch-api'
+import AddEventForm from '../../components/event/add/AddEventForm'
+import eventOparations from '../../../state/ducks/events/operations'
+import notificationOparations from '../../../state/ducks/notification/operation'
+import { VariantIconKeys } from '../../../state/ducks/notification/types'
+import { default as addEventForm, FormValues } from '../../forms/addEvent'
+import Redux from 'redux'
+import * as H from 'history'
+import { withFormik } from 'formik'
+import { withRouter } from 'react-router'
 
 interface State {
   eventsState: {
     addEvent: {
-      isLoading: boolean;
-      error: Error;
-      addedEventId?: number;
-    };
-  };
+      isLoading: boolean
+      error: Error
+      addedEventId?: number
+    }
+  }
 }
 
 const mapStateToProps = (state: State) => {
@@ -25,9 +25,9 @@ const mapStateToProps = (state: State) => {
     isLoading: state.eventsState.addEvent.isLoading,
     error: state.eventsState.addEvent.error,
     addedEventId: state.eventsState.addEvent.addedEventId,
-    isExistsError: state.eventsState.addEvent.error !== null,
-  };
-};
+    isExistsError: state.eventsState.addEvent.error !== null
+  }
+}
 
 const mapDispatchToProps = (dispatch: Redux.Dispatch) => {
   return {
@@ -35,23 +35,23 @@ const mapDispatchToProps = (dispatch: Redux.Dispatch) => {
     showNotification: (message: string, variant: VariantIconKeys) =>
       notificationOparations.showNotification(dispatch, message, variant),
     showNotificationSuccess: () => {
-      notificationOparations.showNotification(dispatch, 'イベント作成に成功しました', 'success');
+      notificationOparations.showNotification(dispatch, 'イベント作成に成功しました', 'success')
     },
     showNotificationError: () => {
       notificationOparations.showNotification(
         dispatch,
         'ネットワークエラーが発生しています。時間をおいて再度実行してください',
         'error'
-      );
+      )
     },
     moveEventDetail: (addedEventId: number, history: H.History) => {
-      history.push(`/events/${addedEventId}`);
+      history.push(`/events/${addedEventId}`)
     },
-    isValidFileFormat: (format: string) => addEventForm.isValidFileFormat(format),
-  };
-};
+    isValidFileFormat: (format: string) => addEventForm.isValidFileFormat(format)
+  }
+}
 
-type SelectOption = { value: number; label: string };
+type SelectOption = { value: number; label: string }
 
 /**
  * 選択されたoptionの値から、apiへ送る値を抽出する関数
@@ -60,8 +60,8 @@ type SelectOption = { value: number; label: string };
  */
 const selectedValueExceptor = (option: SelectOption) => ({
   id: option.value,
-  name: option.label,
-});
+  name: option.label
+})
 
 // NOTE: formikのmapPropsToValuesのcontainer, formik propsとの型付けがまだいまいち理解できていない。anyで仮置き。直したい。
 
@@ -80,13 +80,13 @@ const addEventFormEnhancer = withRouter(
         categories:
           formValues.categories !== [] && formValues.categories.map(category => selectedValueExceptor(category)),
         group: formValues.group !== null && selectedValueExceptor(formValues.group),
-        venue: formValues.venue !== null && selectedValueExceptor(formValues.venue),
-      });
-    },
+        venue: formValues.venue !== null && selectedValueExceptor(formValues.venue)
+      })
+    }
   })(AddEventForm)
-);
+)
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(addEventFormEnhancer);
+)(addEventFormEnhancer)

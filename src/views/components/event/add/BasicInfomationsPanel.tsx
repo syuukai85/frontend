@@ -1,37 +1,37 @@
-import React from 'react';
-import { FormValues } from '../../../forms/addEvent';
-import { FormikProps } from 'formik';
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import Description from '../../form/Description';
-import SelectColor from '../../form/SelectColor';
-import UploadFileButton from '../../form/UploadFileButton';
-import PreviewHeaderImage from '../../form/PreviewHeaderImage';
-import ErrorMessage from '../../form/ErrorMessage';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import Typography from '@material-ui/core/Typography';
-import { AddEventFormProps } from '../../../forms/types/AddEventFormProps';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { makeStyles } from '@material-ui/core/styles';
+import React from 'react'
+import { FormValues } from '../../../forms/addEvent'
+import { FormikProps } from 'formik'
+import TextField from '@material-ui/core/TextField'
+import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box'
+import Description from '../../form/Description'
+import SelectColor from '../../form/SelectColor'
+import UploadFileButton from '../../form/UploadFileButton'
+import PreviewHeaderImage from '../../form/PreviewHeaderImage'
+import ErrorMessage from '../../form/ErrorMessage'
+import ExpansionPanel from '@material-ui/core/ExpansionPanel'
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
+import Typography from '@material-ui/core/Typography'
+import { AddEventFormProps } from '../../../forms/types/AddEventFormProps'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles({
   headerImageSettingContainer: {
     display: 'flex',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   uploadFileButtonContainer: {
-    marginLeft: '10px',
-  },
-});
+    marginLeft: '10px'
+  }
+})
 
 const BasicInfomationsPanel: React.FC<AddEventFormProps & FormikProps<FormValues>> = (
   props: AddEventFormProps & FormikProps<FormValues>
 ) => {
-  const classes = useStyles({});
-  const { values, handleChange, handleBlur, setFieldValue } = props;
+  const classes = useStyles({})
+  const { values, handleChange, handleBlur, setFieldValue } = props
   return (
     <ExpansionPanel defaultExpanded>
       <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
@@ -68,9 +68,9 @@ const BasicInfomationsPanel: React.FC<AddEventFormProps & FormikProps<FormValues
               <Box className={classes.uploadFileButtonContainer}>
                 <UploadFileButton
                   onChange={(e: any) => {
-                    if (e.target.files.length <= 0) return;
-                    if (!props.isValidFileFormat(e.target.files[0].type)) return;
-                    setFieldValue('imageFile', e.target.files[0]);
+                    if (e.target.files.length <= 0) return
+                    if (!props.isValidFileFormat(e.target.files[0].type)) return
+                    setFieldValue('imageFile', e.target.files[0])
                   }}
                 />
               </Box>
@@ -84,7 +84,7 @@ const BasicInfomationsPanel: React.FC<AddEventFormProps & FormikProps<FormValues
         </Grid>
       </ExpansionPanelDetails>
     </ExpansionPanel>
-  );
-};
+  )
+}
 
-export default BasicInfomationsPanel;
+export default BasicInfomationsPanel

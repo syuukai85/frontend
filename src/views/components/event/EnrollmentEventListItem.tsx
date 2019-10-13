@@ -1,28 +1,28 @@
-import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-import { Event } from 'typescript-fetch-api';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
+import React from 'react'
+import Grid from '@material-ui/core/Grid'
+import { makeStyles } from '@material-ui/core/styles'
+import { Event } from 'typescript-fetch-api'
+import Typography from '@material-ui/core/Typography'
+import Divider from '@material-ui/core/Divider'
 
 const useStyles = makeStyles({
   image: {
     width: '90%',
-    marginTop: '10px',
-  },
-});
+    marginTop: '10px'
+  }
+})
 
 interface Props {
-  event: Event;
+  event: Event
 }
 
-const completeStumpImg = require('../../../images/event/completeStump.png');
+const completeStumpImg = require('../../../images/event/completeStump.png')
 
 /**
  * お布施を行うイベント行
  */
 const EnrollmentEventListItem: React.FC<Props> = (props: Props) => {
-  const classes = useStyles({});
+  const classes = useStyles({})
   return (
     <Grid item xs={12}>
       <Grid item xs={12}>
@@ -42,7 +42,7 @@ const EnrollmentEventListItem: React.FC<Props> = (props: Props) => {
         </Grid>
       </Grid>
     </Grid>
-  );
-};
+  )
+}
 
-export default EnrollmentEventListItem;
+export default EnrollmentEventListItem

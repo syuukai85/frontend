@@ -1,30 +1,30 @@
-import React from 'react';
-import { FormValues } from '../../../forms/addEvent';
-import { FormikProps } from 'formik';
-import Grid from '@material-ui/core/Grid';
-import Select from 'react-select';
-import RangeDatePicker from '../../form/RangeDatePicker';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import ErrorMessage from '../../form/ErrorMessage';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import Input from '@material-ui/core/Input';
-import InputAdornment from '@material-ui/core/InputAdornment';
+import React from 'react'
+import { FormValues } from '../../../forms/addEvent'
+import { FormikProps } from 'formik'
+import Grid from '@material-ui/core/Grid'
+import Select from 'react-select'
+import RangeDatePicker from '../../form/RangeDatePicker'
+import ExpansionPanel from '@material-ui/core/ExpansionPanel'
+import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary'
+import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails'
+import ErrorMessage from '../../form/ErrorMessage'
+import Typography from '@material-ui/core/Typography'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import Input from '@material-ui/core/Input'
+import InputAdornment from '@material-ui/core/InputAdornment'
 
 // 開催者を一括で取得する処理はまた別pullreqで対応予定
 const organizers = [
   { value: 1, label: 'organizer1' },
   { value: 2, label: 'organizer2' },
-  { value: 3, label: 'organizer3' },
-];
+  { value: 3, label: 'organizer3' }
+]
 
 // 開催場所を一括で取得する処理はまた別pullreqで対応予定
-const venues = [{ value: 1, label: 'venue1' }, { value: 2, label: 'venue2' }, { value: 3, label: 'venue3' }];
+const venues = [{ value: 1, label: 'venue1' }, { value: 2, label: 'venue2' }, { value: 3, label: 'venue3' }]
 
 const HoldAndRecruitInfomationsPanel: React.FC<FormikProps<FormValues>> = (props: FormikProps<FormValues>) => {
-  const { values, handleChange, handleBlur } = props;
+  const { values, handleChange, handleBlur } = props
   return (
     <ExpansionPanel defaultExpanded>
       <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />} aria-controls="panel1a-content" id="panel1a-header">
@@ -89,7 +89,7 @@ const HoldAndRecruitInfomationsPanel: React.FC<FormikProps<FormValues>> = (props
         </Grid>
       </ExpansionPanelDetails>
     </ExpansionPanel>
-  );
-};
+  )
+}
 
-export default HoldAndRecruitInfomationsPanel;
+export default HoldAndRecruitInfomationsPanel

@@ -1,2 +1,2 @@
-import notificationReducer from './reducers';
-export default notificationReducer;
+import notificationReducer from './reducers'
+export default notificationReducer

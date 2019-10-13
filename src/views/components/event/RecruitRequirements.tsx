@@ -1,35 +1,35 @@
-import React from 'react';
-import { Event } from 'typescript-fetch-api';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableRow from '@material-ui/core/TableRow';
+import React from 'react'
+import { Event } from 'typescript-fetch-api'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
+import Container from '@material-ui/core/Container'
+import Grid from '@material-ui/core/Grid'
+import Table from '@material-ui/core/Table'
+import TableBody from '@material-ui/core/TableBody'
+import TableCell from '@material-ui/core/TableCell'
+import TableRow from '@material-ui/core/TableRow'
 
 const useStyles = makeStyles(theme => ({
   recruitRequirementsContainer: {
     display: 'flex',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   table: {
     width: '60%',
-    marginTop: '15px',
+    marginTop: '15px'
   },
   descriptionPaper: {
     padding: theme.spacing(3, 2),
-    margin: theme.spacing(3, 2),
-  },
-}));
+    margin: theme.spacing(3, 2)
+  }
+}))
 
 interface Props {
-  event: Event;
+  event: Event
 }
 
 const RecruitRequirements: React.FC<Props> = (props: Props) => {
-  const classes = useStyles({});
+  const classes = useStyles({})
   return (
     <Container>
       <Grid item xs={12} className={classes.recruitRequirementsContainer}>
@@ -49,7 +49,7 @@ const RecruitRequirements: React.FC<Props> = (props: Props) => {
         </Table>
       </Grid>
     </Container>
-  );
-};
+  )
+}
 
-export default RecruitRequirements;
+export default RecruitRequirements

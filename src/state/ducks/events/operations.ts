@@ -1,6 +1,6 @@
-import Redux from 'redux';
-import { Event } from 'typescript-fetch-api';
-import actions from './actions';
+import Redux from 'redux'
+import { Event } from 'typescript-fetch-api'
+import actions from './actions'
 
 /**
  * グループの検索
@@ -9,8 +9,8 @@ import actions from './actions';
  * @param {string} groupId グループid
  */
 const searchEvent = (dispatch: Redux.Dispatch, eventId: string) => {
-  dispatch(actions.searchEvent.searchEvent(eventId));
-};
+  dispatch(actions.searchEvent.searchEvent(eventId))
+}
 
 /**
  * イベントの追加
@@ -19,8 +19,8 @@ const searchEvent = (dispatch: Redux.Dispatch, eventId: string) => {
  * @param {Event} event イベント
  */
 const addEvent = (dispatch: Redux.Dispatch, event: Event) => {
-  dispatch(actions.addEvent.addEvent(event));
-};
+  dispatch(actions.addEvent.addEvent(event))
+}
 
 /**
  * 最近追加されたグループの取得
@@ -28,8 +28,8 @@ const addEvent = (dispatch: Redux.Dispatch, event: Event) => {
  * @param {Redux.Dispatch} dispatch reduxのdispatch
  */
 const searchRecentlyAddedEvent = (dispatch: Redux.Dispatch) => {
-  dispatch(actions.searchRecentlyAddedEvent.searchRecentlyAddedEvent());
-};
+  dispatch(actions.searchRecentlyAddedEvent.searchRecentlyAddedEvent())
+}
 
 /**
  * 最近終了したグループの取得
@@ -37,12 +37,12 @@ const searchRecentlyAddedEvent = (dispatch: Redux.Dispatch) => {
  * @param {Redux.Dispatch} dispatch reduxのdispatch
  */
 const searchRecentlyFinishedEvent = (dispatch: Redux.Dispatch) => {
-  dispatch(actions.searchRecentlyFinishedEvent.searchRecentlyFinishedEvent());
-};
+  dispatch(actions.searchRecentlyFinishedEvent.searchRecentlyFinishedEvent())
+}
 
 export default {
   searchEvent,
   addEvent,
   searchRecentlyAddedEvent,
-  searchRecentlyFinishedEvent,
-};
+  searchRecentlyFinishedEvent
+}

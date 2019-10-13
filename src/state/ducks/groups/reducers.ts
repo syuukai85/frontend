@@ -1,11 +1,11 @@
-import { combineReducers } from 'redux';
-import { Group } from 'typescript-fetch-api';
-import { SearchGroupAction, SearchGroupEventsAction, SearchRecentlyAddedGroupAction } from './actions';
-import { ActionTypes } from './types';
+import { combineReducers } from 'redux'
+import { Group } from 'typescript-fetch-api'
+import { SearchGroupAction, SearchGroupEventsAction, SearchRecentlyAddedGroupAction } from './actions'
+import { ActionTypes } from './types'
 
 interface GroupState {
-  group: Group;
-  isLoading: boolean;
+  group: Group
+  isLoading: boolean
 }
 
 /**
@@ -23,30 +23,30 @@ const group = (
   switch (action.type) {
     case ActionTypes.REQUEST_GROUP: {
       return Object.assign({}, state, {
-        isLoading: action.isLoading,
-      });
+        isLoading: action.isLoading
+      })
     }
     case ActionTypes.SUCCESS_GROUP: {
       return Object.assign({}, state, {
         group: action.group,
-        isLoading: action.isLoading,
-      });
+        isLoading: action.isLoading
+      })
     }
     case ActionTypes.ERROR_GROUP: {
       return Object.assign({}, state, {
         isLoading: action.isLoading,
-        error: action.error,
-      });
+        error: action.error
+      })
     }
     default: {
-      return state;
+      return state
     }
   }
-};
+}
 
 interface GroupEventsState {
-  events: Array<Event>;
-  isLoading: boolean;
+  events: Array<Event>
+  isLoading: boolean
 }
 
 /**
@@ -64,30 +64,30 @@ const groupEvents = (
   switch (action.type) {
     case ActionTypes.REQUEST_GROUP_EVENTS: {
       return Object.assign({}, state, {
-        isLoading: action.isLoading,
-      });
+        isLoading: action.isLoading
+      })
     }
     case ActionTypes.SUCCESS_GROUP_EVENTS: {
       return Object.assign({}, state, {
         events: action.events,
-        isLoading: action.isLoading,
-      });
+        isLoading: action.isLoading
+      })
     }
     case ActionTypes.ERROR_GROUP_EVENTS: {
       return Object.assign({}, state, {
         isLoading: action.isLoading,
-        error: action.error,
-      });
+        error: action.error
+      })
     }
     default: {
-      return state;
+      return state
     }
   }
-};
+}
 
 interface RecentlyAddedGroupState {
-  groups: Array<Group>;
-  isLoading: boolean;
+  groups: Array<Group>
+  isLoading: boolean
 }
 
 /**
@@ -105,30 +105,30 @@ const recentlyAddedGroup = (
   switch (action.type) {
     case ActionTypes.REQUEST_NEWLY_GROUP: {
       return Object.assign({}, state, {
-        isLoading: action.isLoading,
-      });
+        isLoading: action.isLoading
+      })
     }
     case ActionTypes.SUCCESS_NEWLY_GROUP: {
       return Object.assign({}, state, {
         isLoading: action.isLoading,
-        groups: action.groups,
-      });
+        groups: action.groups
+      })
     }
     case ActionTypes.ERROR_NEWLY_GROUP: {
       return Object.assign({}, state, {
         isLoading: action.isLoading,
-        error: action.error,
-      });
+        error: action.error
+      })
     }
     default: {
-      return state;
+      return state
     }
   }
-};
+}
 
 const groupsReducer = combineReducers({
   group,
   groupEvents,
-  recentlyAddedGroup,
-});
-export default groupsReducer;
+  recentlyAddedGroup
+})
+export default groupsReducer

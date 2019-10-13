@@ -1,14 +1,14 @@
-import React from 'react';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import WelcomeBoard from '../components/welcome/WelcomeBoard';
-import RecentlyAddedEventListContainer from '../containers/event/RecentlyAddedEventListContainer';
-import RecentlyFinishedEventListContainer from '../containers/event/RecentlyFinishedEventListContainer';
-import RecentlyAddedGroupListContainer from '../containers/group/RecentlyAddedGroupListContainer';
-import BottomAppBar from '../components/appBar/BottomAppBar';
-import EventIcon from '@material-ui/icons/Event';
+import React from 'react'
+import Container from '@material-ui/core/Container'
+import Grid from '@material-ui/core/Grid'
+import WelcomeBoard from '../components/welcome/WelcomeBoard'
+import RecentlyAddedEventListContainer from '../containers/event/RecentlyAddedEventListContainer'
+import RecentlyFinishedEventListContainer from '../containers/event/RecentlyFinishedEventListContainer'
+import RecentlyAddedGroupListContainer from '../containers/group/RecentlyAddedGroupListContainer'
+import BottomAppBar from '../components/appBar/BottomAppBar'
+import EventIcon from '@material-ui/icons/Event'
 
-const menus = [{ icon: <EventIcon />, text: 'イベント作成', link: '/event/add' }];
+const menus = [{ icon: <EventIcon />, text: 'イベント作成', link: '/event/add' }]
 
 /**
  * Home画面
@@ -30,7 +30,7 @@ const HomeScene: React.FC = () => {
       </Container>
       <BottomAppBar menus={menus} />
     </>
-  );
-};
+  )
+}
 
-export default HomeScene;
+export default HomeScene

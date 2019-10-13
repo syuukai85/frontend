@@ -1,35 +1,35 @@
-import { ActionTypes } from '../types';
-import { Group } from 'typescript-fetch-api';
+import { ActionTypes } from '../types'
+import { Group } from 'typescript-fetch-api'
 
 const searchRecentlyAddedGroup = () => {
   return {
     type: ActionTypes.REQUEST_NEWLY_GROUP,
-    isLoading: true,
-  };
-};
+    isLoading: true
+  }
+}
 
 const searchSuccessRecentlyAddedGroup = (groups: Array<Group>) => {
   return {
     type: ActionTypes.SUCCESS_NEWLY_GROUP,
     isLoading: true,
-    groups,
-  };
-};
+    groups
+  }
+}
 
 const searchErrorRecentlyAddedGroup = (error: Error) => {
   return {
     type: ActionTypes.ERROR_NEWLY_GROUP,
     isLoading: false,
-    error,
-  };
-};
+    error
+  }
+}
 
 export default {
   searchRecentlyAddedGroup,
   searchSuccessRecentlyAddedGroup,
-  searchErrorRecentlyAddedGroup,
-};
+  searchErrorRecentlyAddedGroup
+}
 
 export type SearchRecentlyAddedGroupAction = ReturnType<typeof searchRecentlyAddedGroup> &
   ReturnType<typeof searchSuccessRecentlyAddedGroup> &
-  ReturnType<typeof searchErrorRecentlyAddedGroup>;
+  ReturnType<typeof searchErrorRecentlyAddedGroup>

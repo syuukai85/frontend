@@ -1,18 +1,18 @@
-import { createSelector } from 'reselect';
-import { matchPath } from 'react-router';
+import { createSelector } from 'reselect'
+import { matchPath } from 'react-router'
 
 interface Router {
   location: {
-    pathname: string;
-  };
+    pathname: string
+  }
 }
 
 interface State {
-  router: Router;
+  router: Router
 }
 
 interface Param {
-  id: string;
+  id: string
 }
 
 /**
@@ -20,7 +20,7 @@ interface Param {
  *
  * @param {State} state state情報
  */
-const routerSelector = (state: State): Router => state.router;
+const routerSelector = (state: State): Router => state.router
 
 /**
  * 渡された情報からgroup idをselectする関数
@@ -33,11 +33,11 @@ const getGroupIdFromRouter = createSelector(
     const match = matchPath<Param>(state.location.pathname, {
       path: '/groups/:id',
       exact: true,
-      strict: true,
-    });
-    const id = match === null || match.params === null || match.params.id === null ? '' : match.params.id;
-    return id;
+      strict: true
+    })
+    const id = match === null || match.params === null || match.params.id === null ? '' : match.params.id
+    return id
   }
-);
+)
 
-export { getGroupIdFromRouter };
+export { getGroupIdFromRouter }

@@ -1,13 +1,13 @@
-import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import AssignButton from './AssignButton';
+import React from 'react'
+import Typography from '@material-ui/core/Typography'
+import { makeStyles } from '@material-ui/core/styles'
+import Container from '@material-ui/core/Container'
+import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box'
+import AssignButton from './AssignButton'
 
 interface ColorProps {
-  backgroundColor: string;
+  backgroundColor: string
 }
 
 const useStyles = makeStyles(theme => ({
@@ -16,27 +16,27 @@ const useStyles = makeStyles(theme => ({
     height: '80vh',
     display: 'flex',
     alignItems: 'center',
-    backgroundColor: props.backgroundColor,
+    backgroundColor: props.backgroundColor
   }),
   headerImage: {
     marginBottom: '50px',
-    width: '50%',
+    width: '50%'
   },
   headerContainer: {
     flexDirection: 'column',
-    justifyContent: 'center',
-  },
-}));
+    justifyContent: 'center'
+  }
+}))
 
 interface Props {
-  title: string;
-  colorCode?: string;
-  imageUrl?: string;
+  title: string
+  colorCode?: string
+  imageUrl?: string
 }
 
 const DetailHeader: React.FC<Props> = (props: Props) => {
-  const bgColor = props.colorCode !== void 0 ? props.colorCode : '#000';
-  const classes = useStyles({ backgroundColor: bgColor });
+  const bgColor = props.colorCode !== void 0 ? props.colorCode : '#000'
+  const classes = useStyles({ backgroundColor: bgColor })
   return (
     <div className={classes.header}>
       <Container>
@@ -49,7 +49,7 @@ const DetailHeader: React.FC<Props> = (props: Props) => {
         </Grid>
       </Container>
     </div>
-  );
-};
+  )
+}
 
-export default DetailHeader;
+export default DetailHeader

@@ -1,16 +1,16 @@
-import React from 'react';
-import { Provider } from 'react-redux';
-import { Route, Switch } from 'react-router-dom';
-import { ConnectedRouter } from 'connected-react-router';
-import configureStore, { history } from '../state/store';
-import LoginScene from './scenes/LoginScene';
-import HomeScene from './scenes/HomeScene';
-import EventDetailScene from './scenes/event/DetailScene';
-import AddEventScene from './scenes/event/AddScene';
-import GroupDetailScene from './scenes/group/DetailScene';
-import AuthGroupContainer from './containers/auth/AuthGroupContainer';
+import React from 'react'
+import { Provider } from 'react-redux'
+import { Route, Switch } from 'react-router-dom'
+import { ConnectedRouter } from 'connected-react-router'
+import configureStore, { history } from '../state/store'
+import LoginScene from './scenes/LoginScene'
+import HomeScene from './scenes/HomeScene'
+import EventDetailScene from './scenes/event/DetailScene'
+import AddEventScene from './scenes/event/AddScene'
+import GroupDetailScene from './scenes/group/DetailScene'
+import AuthGroupContainer from './containers/auth/AuthGroupContainer'
 
-const store = configureStore();
+const store = configureStore()
 
 const App: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ const App: React.FC = () => {
         </Switch>
       </ConnectedRouter>
     </Provider>
-  );
-};
+  )
+}
 
-export default App;
+export default App

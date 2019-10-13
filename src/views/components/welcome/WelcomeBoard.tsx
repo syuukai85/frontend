@@ -1,32 +1,32 @@
-import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+import React from 'react'
+import Card from '@material-ui/core/Card'
+import CardHeader from '@material-ui/core/CardHeader'
+import CardContent from '@material-ui/core/CardContent'
+import { makeStyles } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles({
   imageWidthHalf: {
-    width: '50%',
+    width: '50%'
   },
   imageWidthFull: {
-    width: '100%',
+    width: '100%'
   },
   imageContainer: {
     marginTop: '15px',
-    marginBottom: '15px',
-  },
-});
+    marginBottom: '15px'
+  }
+})
 
-const eventDetailImg = require('../../../images/eventDetail.png');
-const groupDetailImg = require('../../../images/groupDetail.png');
-const throwingMoneyImg = require('../../../images/throwingMoney.png');
+const eventDetailImg = require('../../../images/eventDetail.png')
+const groupDetailImg = require('../../../images/groupDetail.png')
+const throwingMoneyImg = require('../../../images/throwingMoney.png')
 
 /**
  * WelcomeBoardの定義の追加
  */
 const WelcomeBoard: React.FC = () => {
-  const classes = useStyles({});
+  const classes = useStyles({})
   return (
     <Card>
       <CardHeader title="connthassへようこそ" />
@@ -46,7 +46,7 @@ const WelcomeBoard: React.FC = () => {
         </div>
       </CardContent>
     </Card>
-  );
-};
+  )
+}
 
-export default WelcomeBoard;
+export default WelcomeBoard

@@ -1,14 +1,14 @@
-import React from 'react';
-import { User } from 'typescript-fetch-api';
-import Chip from '@material-ui/core/Chip';
-import Avatar from '@material-ui/core/Avatar';
+import React from 'react'
+import { User } from 'typescript-fetch-api'
+import Chip from '@material-ui/core/Chip'
+import Avatar from '@material-ui/core/Avatar'
 
 interface Props {
-  organizers?: Array<User>;
+  organizers?: Array<User>
 }
 
 const OrganizerChips: React.FC<Props> = (props: Props) => {
-  if (props.organizers === void 0) return <></>;
+  if (props.organizers === void 0) return <></>
   return (
     <div>
       {props.organizers.map((organizer: User) => (
@@ -20,7 +20,7 @@ const OrganizerChips: React.FC<Props> = (props: Props) => {
         />
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default OrganizerChips;
+export default OrganizerChips

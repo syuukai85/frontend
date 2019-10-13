@@ -1,8 +1,8 @@
-import React from 'react';
-import GroupDetailContainer from '../../containers/group/GroupDetailContainer';
+import React from 'react'
+import GroupDetailContainer from '../../containers/group/GroupDetailContainer'
 
 const GroupDetailScene: React.FC = () => {
-  return <GroupDetailContainer />;
-};
+  return <GroupDetailContainer />
+}
 
-export default GroupDetailScene;
+export default GroupDetailScene

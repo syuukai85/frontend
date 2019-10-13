@@ -1,31 +1,31 @@
-import React, { useEffect } from 'react';
-import { Event } from 'typescript-fetch-api';
-import Loading from '../loading/Loading';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
-import AssignButton from '../detail/AssignButton';
-import DetailHeader from '../detail/DetailHeader';
-import RecruitRequirements from './RecruitRequirements';
-import Description from '../detail/Description';
-import NetworkErrorTemplate from '../error/NetworkErrorTemplate';
+import React, { useEffect } from 'react'
+import { Event } from 'typescript-fetch-api'
+import Loading from '../loading/Loading'
+import Container from '@material-ui/core/Container'
+import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box'
+import AssignButton from '../detail/AssignButton'
+import DetailHeader from '../detail/DetailHeader'
+import RecruitRequirements from './RecruitRequirements'
+import Description from '../detail/Description'
+import NetworkErrorTemplate from '../error/NetworkErrorTemplate'
 
 interface Props {
-  id: string;
-  event: Event;
-  isLoading: boolean;
-  error: Error;
-  searchEvent: (eventId: string) => void;
+  id: string
+  event: Event
+  isLoading: boolean
+  error: Error
+  searchEvent: (eventId: string) => void
 }
 
 const EventDetail: React.FC<Props> = (props: Props) => {
   const effectFn = () => {
-    props.searchEvent(props.id);
-  };
-  useEffect(effectFn, []);
-  if (props.isLoading) return <Loading />;
-  const isExistsError = props.error !== void 0;
-  if (isExistsError) return <NetworkErrorTemplate />;
+    props.searchEvent(props.id)
+  }
+  useEffect(effectFn, [])
+  if (props.isLoading) return <Loading />
+  const isExistsError = props.error !== void 0
+  if (isExistsError) return <NetworkErrorTemplate />
   return (
     <>
       <DetailHeader title={props.event.title} colorCode={props.event.colorCode} imageUrl={props.event.imageUrl} />
@@ -39,7 +39,7 @@ const EventDetail: React.FC<Props> = (props: Props) => {
         </Grid>
       </Container>
     </>
-  );
-};
+  )
+}
 
-export default EventDetail;
+export default EventDetail
