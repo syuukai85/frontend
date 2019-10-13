@@ -10,11 +10,11 @@ import AppBarMenu from './AppBarMenu';
 const useStyles = makeStyles({
   appBar: {
     top: 'auto',
-    bottom: 0
+    bottom: 0,
   },
   grow: {
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 });
 
 type Menu = {

@@ -10,7 +10,9 @@ import HoldAndRecruitInfomationsPanel from './HoldAndRecruitInfomationsPanel';
 import AdditionalInfomationPanel from './AdditionalInfomationPanel';
 
 // form全ての要素を平置きしてるけどblock単位に分けた方が見やすい？
-const AddEventForm: React.FC<AddEventFormProps & FormikProps<FormValues>> = (props: AddEventFormProps & FormikProps<FormValues>) => {
+const AddEventForm: React.FC<AddEventFormProps & FormikProps<FormValues>> = (
+  props: AddEventFormProps & FormikProps<FormValues>
+) => {
   // TODO: presentational にロジックがよりすぎ。containerに寄せられる？
   if (!props.isLoading) {
     if (props.isExistsError) {
@@ -22,7 +24,7 @@ const AddEventForm: React.FC<AddEventFormProps & FormikProps<FormValues>> = (pro
       props.moveEventDetail(props.addedEventId, props.history);
       props.showNotificationSuccess();
     }
-  })
+  });
   return (
     <form onSubmit={props.handleSubmit}>
       <BasicInfomationPanel {...props} />

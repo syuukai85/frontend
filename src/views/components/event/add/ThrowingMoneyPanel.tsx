@@ -16,13 +16,13 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   container: {
     marginTop: '20px',
-    marginBottom: '20px'
+    marginBottom: '20px',
   },
   image: {
     width: '100%',
     height: '300px',
-    objectFit: 'contain'
-  }
+    objectFit: 'contain',
+  },
 });
 
 const ThrowingMoneyPanel: React.FC<AddEventFormProps & FormikProps<FormValues>> = (

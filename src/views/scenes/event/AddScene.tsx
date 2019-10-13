@@ -9,8 +9,8 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   container: {
     marginTop: '20px',
-    marginBottom: '20px'
-  }
+    marginBottom: '20px',
+  },
 });
 
 const menus = [{ icon: <HomeIcon />, text: 'ホームへ戻る', link: '/' }];

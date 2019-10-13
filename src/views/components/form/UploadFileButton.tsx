@@ -8,8 +8,8 @@ interface Props {
 
 const useStyles = makeStyles({
   hide: {
-    display: 'none'
-  }
+    display: 'none',
+  },
 });
 
 const UploadFileButton: React.FC<Props> = (props: Props) => {

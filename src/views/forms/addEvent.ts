@@ -46,7 +46,7 @@ const mapPropsToValues = (props: AddEventFormInitValues) => ({
   organizers: props.organizers || [],
   venue: props.venue || null,
   categories: props.categories || [],
-  group: props.group || null
+  group: props.group || null,
 });
 
 /**
@@ -66,7 +66,7 @@ const validateSchema = Yup.object().shape({
   holdStartDate: validates.startDate('開催開始日時').required(messages.validate.required('開催開始日時')),
   holdEndDate: validates.endDate('開催終了日時', 'holdStartDate').required(messages.validate.required('開催終了日時')),
   organizers: validates.organizers(),
-  venue: validates.venue()
+  venue: validates.venue(),
 });
 
 const isValidFileFormat = (format: string) => constants.validate.file.formats.includes(format);
@@ -74,5 +74,5 @@ const isValidFileFormat = (format: string) => constants.validate.file.formats.in
 export default {
   mapPropsToValues,
   validateSchema,
-  isValidFileFormat
+  isValidFileFormat,
 };

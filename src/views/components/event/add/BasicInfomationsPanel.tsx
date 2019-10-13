@@ -20,11 +20,11 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles({
   headerImageSettingContainer: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   uploadFileButtonContainer: {
-    marginLeft: '10px'
-  }
+    marginLeft: '10px',
+  },
 });
 
 const BasicInfomationsPanel: React.FC<AddEventFormProps & FormikProps<FormValues>> = (

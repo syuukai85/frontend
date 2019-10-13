@@ -12,5 +12,5 @@ export interface AddEventFormProps {
   showErrorMessage: (message: string) => void;
   showNotificationSuccess: () => void;
   showNotificationError: () => void;
-  moveEventDetail: (addedEventId: number, history: H.History) => void
-};
+  moveEventDetail: (addedEventId: number, history: H.History) => void;
+}
