@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 12.12.0
+before_deploy:
+  - npm i -g yarn @openapitools/openapi-generator-cli
+  - yarn api:docs
+  - yarn api
+  - yarn install
+  - yarn build
+env:
+  global:
+    secure: $DOT_ENVS
+deploy:
+  provider: firebase
+  token:
+    secure: $FIREBASE_TOKEN
+  project: $FIREBASE_PROJECT
