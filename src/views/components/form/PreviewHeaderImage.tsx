@@ -34,7 +34,7 @@ const PreviewHeaderImage: React.FC<Props> = (props: Props) => {
     <Grid className={`${classes.imageContainer} ${classes.colorCode}`} item xs={12}>
       {props.imageFile !== null && (
         <Box className={classes.imageWrapper}>
-          <img className={classes.image} src={URL.createObjectURL(props.imageFile)} />
+          <img className={classes.image} src={URL.createObjectURL(props.imageFile)} alt="previewHeader" />
         </Box>
       )}
     </Grid>

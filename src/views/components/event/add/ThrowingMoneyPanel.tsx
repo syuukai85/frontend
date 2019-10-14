@@ -50,7 +50,11 @@ const ThrowingMoneyPanel: React.FC<AddEventFormProps & FormikProps<FormValues>> 
           {props.values.qrCodeFile !== null && (
             <Grid item xs={12}>
               <Box>
-                <img className={classes.image} src={URL.createObjectURL(props.values.qrCodeFile)} />
+                <img
+                  className={classes.image}
+                  src={URL.createObjectURL(props.values.qrCodeFile)}
+                  alt="qrCodeFileImage"
+                />
               </Box>
             </Grid>
           )}
