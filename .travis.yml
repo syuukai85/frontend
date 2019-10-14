@@ -17,4 +17,6 @@ deploy:
   provider: firebase
   token:
     secure: $FIREBASE_TOKEN
+  tag: true
+  all_branches: true
   project: $FIREBASE_PROJECT
