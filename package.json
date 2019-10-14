@@ -38,7 +38,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api:docs": "cd .. && git clone $npm_package_api_docs_repository && cd api-docs/swagger && npm install && npm run resolve && cd ../../frontend",
+    "api:docs": "cd .. && git clone $npm_package_api_docs_repository && cd api-docs/swagger && npm install && npm run resolve && cd ../../frontend && pwd",
     "api": "rm -rf gen/api && openapi-generator generate --input-spec ../api-docs/swagger/openapi.yaml --skip-validate-spec --generator-name typescript-fetch --output gen/api --config api.json && cd gen/api && npm install",
     "format:all": "prettier --config .prettierrc --write 'src/**/*.ts' --write 'src/**/*.tsx'"
   },
