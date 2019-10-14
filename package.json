@@ -32,12 +32,14 @@
     "typescript-fetch-api": "file:gen/api",
     "yup": "^0.27.0"
   },
+  "api_docs_repository": "https://github.com/syuukai85/api-docs.git",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api": "rm -rf gen/api && openapi-generator generate --input-spec ../../api-docs/swagger/openapi.yaml --skip-validate-spec --generator-name typescript-fetch --output gen/api --config api.json && cd gen/api && npm install",
+    "api:docs": "cd .. && git clone $npm_package_api_docs_repository && cd api-docs/swagger && npm install && npm run resolve && cd ../../frontend",
+    "api": "rm -rf gen/api && openapi-generator generate --input-spec ../api-docs/swagger/openapi.yaml --skip-validate-spec --generator-name typescript-fetch --output gen/api --config api.json && cd gen/api && npm install",
     "format:all": "prettier --config .prettierrc --write 'src/**/*.ts' --write 'src/**/*.tsx'"
   },
   "eslintConfig": {
