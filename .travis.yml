@@ -4,7 +4,7 @@ node_js:
 dist: trusty
 sudo: false
 cache: yarn
-before_script:
+before_install:
   - npm i -g yarn @openapitools/openapi-generator-cli
   - yarn api:docs
   - yarn api
