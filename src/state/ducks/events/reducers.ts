@@ -18,7 +18,7 @@ interface EventState {
  */
 const event = (
   state: EventState = {
-    event: { title: '', holdStartDate: new Date(), holdEndDate: new Date() },
+    event: { title: '', capacity: 0, holdStartDate: new Date(), holdEndDate: new Date() },
     isLoading: true
   },
   action: SearchEventAction
@@ -61,7 +61,10 @@ interface AddEventState {
  * @returns {EventState} reduce後のstate情報
  */
 const addEvent = (
-  state: AddEventState = { event: { title: '', holdStartDate: new Date(), holdEndDate: new Date() }, isLoading: true },
+  state: AddEventState = {
+    event: { title: '', capacity: 0, holdStartDate: new Date(), holdEndDate: new Date() },
+    isLoading: true
+  },
   action: AddEventAction
 ): EventState => {
   switch (action.type) {
