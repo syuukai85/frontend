@@ -3,7 +3,7 @@ node_js:
   - 12.12.0
 dist: trusty
 sudo: false
-cache: yarn
+cache: yarn --passWithNoTests
 before_install:
   - npm i -g yarn @openapitools/openapi-generator-cli
   - yarn api:docs
