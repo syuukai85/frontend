@@ -10,15 +10,6 @@ before_install:
   - yarn api
 before_deploy:
   - yarn build
-env:
-  global:
-    secure: $DOT_ENV1
-    secure: $DOT_ENV2
-    secure: $DOT_ENV3
-    secure: $DOT_ENV4
-    secure: $DOT_ENV5
-    secure: $DOT_ENV6
-    secure: $DOT_ENV7
 deploy:
   skip_cleanup: true
   provider: firebase
