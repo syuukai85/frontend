@@ -42,7 +42,7 @@ const DetailHeader: React.FC<Props> = (props: Props) => {
       <Container>
         <Grid item xs={12}>
           <Box textAlign="center" className={classes.headerContainer}>
-            <img className={classes.headerImage} src={props.imageUrl} />
+            <img className={classes.headerImage} src={props.imageUrl} alt="headerImage" />
             <Typography variant="h2">{props.title}</Typography>
             <AssignButton />
           </Box>

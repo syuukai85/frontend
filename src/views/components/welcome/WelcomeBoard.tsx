@@ -29,10 +29,10 @@ const WelcomeBoard: React.FC = () => {
   const classes = useStyles({})
   return (
     <Card>
-      <CardHeader title="connthassへようこそ" />
+      <CardHeader title="syuukaiへようこそ" />
       <CardContent>
         <Typography color="textSecondary" component="p">
-          connthassではイベントやグループを作成して好きな技術を余すことなく楽しむことができます
+          syuukaiではイベントやグループを作成して好きな技術を余すことなく楽しむことができます
         </Typography>
         <div className={classes.imageContainer}>
           <img className={classes.imageWidthHalf} src={eventDetailImg} alt="eventDetail" />

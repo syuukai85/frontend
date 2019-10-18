@@ -15,7 +15,7 @@ const LoginScene: React.FC = () => {
   return (
     <Container fixed>
       <Typography className={styles.title} variant="h1">
-        Connthass
+        Syuukai
       </Typography>
       <GoogleLoginButtonContainer />
     </Container>
