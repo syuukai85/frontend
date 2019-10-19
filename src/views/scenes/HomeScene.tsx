@@ -7,8 +7,12 @@ import RecentlyFinishedEventListContainer from '../containers/event/RecentlyFini
 import RecentlyAddedGroupListContainer from '../containers/group/RecentlyAddedGroupListContainer'
 import BottomAppBar from '../components/appBar/BottomAppBar'
 import EventIcon from '@material-ui/icons/Event'
+import GroupIcon from '@material-ui/icons/Group'
 
-const menus = [{ icon: <EventIcon />, text: 'イベント作成', link: '/event/add' }]
+const menus = [
+  { icon: <EventIcon />, text: 'イベント作成', link: '/event/add' },
+  { icon: <GroupIcon />, text: 'グループ作成', link: '/group/add' }
+]
 
 /**
  * Home画面

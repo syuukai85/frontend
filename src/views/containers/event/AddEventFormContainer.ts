@@ -64,12 +64,12 @@ const selectedValueExceptor = (option: SelectOption) => ({
 })
 
 // NOTE: formikのmapPropsToValuesのcontainer, formik propsとの型付けがまだいまいち理解できていない。anyで仮置き。直したい。
-
 // TODO: 今、画像関連(QRコード, ヘッダー画像)に関しては、どこで画像を作成するのかが決まっていないので、
 // 作る箇所次第では、このsubmitのタイミングで作成して、urlだけDBに保存するとかの対応になる。
 // firebaseなら簡単に実装できそう。これを使うことになるのであれば導入は案外楽そう
 // https://firebase.google.com/docs/storage/web/upload-files?hl=ja
 const addEventFormEnhancer = withRouter(
+  // @ts-ignore
   withFormik<any, FormValues>({
     mapPropsToValues: addEventForm.mapPropsToValues,
     validationSchema: addEventForm.validateSchema,
